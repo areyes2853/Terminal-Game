@@ -1,6 +1,7 @@
 
 const prompt = require("prompt-sync")();
 const username = prompt('What is your name? ');
+const smartAsssremarsk = require('./array.js');
 
 console.log(`Welcome, ${username}! \n`);
 console.log("Please enter your move (rock, paper, or scissors)");
@@ -79,14 +80,16 @@ function playGame() {
     
     console.log(`\nPlayer: ${playerMove} \n`);
     console.log(`Computer: ${computerMove} \n`);
-    if (winner == "tie") {
+    if (winner === "tie") {
       console.log("You guys are tied!");
     } else if (winner == "player") {
       console.log(`${username} wins! High five!`);
     } else {
-      console.log("You lose!");
+        const randomIndex = Math.floor(Math.random() * smartAsssremarsk.length);
+      console.log(`Computer wins! ${smartAsssremarsk[randomIndex]}`);
     };
   } else {
+    
     console.log(`Invalid Input ${playerMove} :(`);
   };
 }
