@@ -1,19 +1,17 @@
-const prompt = require("prompt-sync")();
-// const username = prompt('What is your name? ');
-// console.log(`Your name is ${username}`);
 
-//testing!!
-//testing two times in a row!!
-//sudo code!
-// console.log(`Welcome ${username} to Rock, Paper, Scissors!`);
+const prompt = require("prompt-sync")();
+const username = prompt('What is your name? ');
+
+console.log(`Welcome, ${username}! \n`);
 console.log("Please enter your move (rock, paper, or scissors)");
 console.log(
-  "After you make your move, the computer will randomly select a move"
+  "After you make your move, the computer will randomly select a move. \n"
 );
-console.log("The winner will be determined based on the following rules:");
-console.log("Rock beats Scissors");
-console.log("Scissors beats Paper");
-console.log("Paper beats Rock");
+console.log("The winner will be determined based on the following RULES:");
+console.log("1. Rock beats Scissors.");
+console.log("2. Scissors beats Paper.");
+console.log("3. Paper beats Rock. \n");
+
 console.log("Good luck!");
 console.log("-----------------------------------");
 
@@ -71,8 +69,26 @@ function playGame() {
   // Display both moves and the result (win/lose/tie)
 
 
-  const playerMove = prompt('Choose a move: "Rock", "Paper", "Scissors"').toLocaleLowerCase();
-  
+  const playerMove = prompt('Choose a move: "Rock", "Paper", "Scissors" : ').toLocaleLowerCase();
+  const isPlayerMoveValid = (playerMove == "rock" || playerMove == "paper" || playerMove == "scissors");
+
+  if (isPlayerMoveValid) {
+    const computerMove = getComputerMove();
+    const winner = determineWinner(playerMove, computerMove); // output: tie, player, computer
+    // If tie, then log "You guys are tied!"
+    
+    console.log(`\nPlayer: ${playerMove} \n`);
+    console.log(`Computer: ${computerMove} \n`);
+    if (winner == "tie") {
+      console.log("You guys are tied!");
+    } else if (winner == "player") {
+      console.log(`${username} wins! High five!`);
+    } else {
+      console.log("You lose!");
+    };
+  } else {
+    console.log(`Invalid Input ${playerMove} :(`);
+  };
 }
 
 // Start the game
