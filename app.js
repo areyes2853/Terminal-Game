@@ -5,6 +5,15 @@ console.log(`Your name is ${username}`);
 //testing!!
 //testing two times in a row!!
 //sudo code!
+console.log(`Welcome ${username} to Rock, Paper, Scissors!`);
+console.log('Please enter your move (rock, paper, or scissors)');
+console.log('After you make your move, the computer will randomly select a move');
+console.log('The winner will be determined based on the following rules:');
+console.log('Rock beats Scissors');
+console.log('Scissors beats Paper');
+console.log('Paper beats Rock');
+console.log('Good luck!');
+console.log('-----------------------------------');
 
 // Function to generate computer's move
 function getComputerMove() {
