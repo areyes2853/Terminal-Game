@@ -1,11 +1,11 @@
 const prompt = require('prompt-sync')();
-const username = prompt('What is your name? ');
-console.log(`Your name is ${username}`);
+// const username = prompt('What is your name? ');
+// console.log(`Your name is ${username}`);
 
 //testing!!
 //testing two times in a row!!
 //sudo code!
-console.log(`Welcome ${username} to Rock, Paper, Scissors!`);
+// console.log(`Welcome ${username} to Rock, Paper, Scissors!`);
 console.log('Please enter your move (rock, paper, or scissors)');
 console.log('After you make your move, the computer will randomly select a move');
 console.log('The winner will be determined based on the following rules:');
@@ -22,8 +22,24 @@ function getComputerMove() {
     // 1 -> 'paper'
     // 2 -> 'scissors'
     // Return the corresponding move
-  }
-  
+    let result;
+    const a = Math.floor(Math.random() * 3);
+
+    if (a === 0 ){
+      result = 'rock';
+    } else if (a === 1) {
+      result = 'paper';
+    } else {
+      result = 'scissors'
+    }
+    
+      return result;
+    }
+
+  //getComputerMove()
+  console.log(getComputerMove());
+
+
   // Function to determine the winner given a player's move and the computer's move
   function determineWinner(playerMove, computerMove) {
     // If the moves are the same, it's a tie
@@ -44,5 +60,5 @@ function getComputerMove() {
   }
   
   // Start the game
-  playGame();
+  // playGame();
   
