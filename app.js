@@ -26,11 +26,11 @@ function getComputerMove() {
   // 2 -> 'scissors'
   // Return the corresponding move
   let result;
-  const a = Math.floor(Math.random() * 3);
+  const computerChoice = Math.floor(Math.random() * 3);//this line generates a random number between 0 and 2
 
-  if (a === 0) {
+  if (computerChoice === 0) {
     result = "rock";
-  } else if (a === 1) {
+  } else if (computerChoice === 1) {
     result = "paper";
   } else {
     result = "scissors";
@@ -40,7 +40,7 @@ function getComputerMove() {
 }
 
 // Function to determine the winner given a player's move and the computer's move
-function determineWinner(playerMove, computerMove) {
+function determineWinner(playerMove, computerMove) { //comparison bwtn both parameters
   // If the moves are the same, it's a tie
   let winner;
   if (playerMove === computerMove) {
@@ -66,7 +66,9 @@ function determineWinner(playerMove, computerMove) {
   // Return the result (e.g., 'win', 'lose', 'tie')
   return winner;
     
-}
+} // sylvia notes for understanding for this assignment but not for future dev
+// so now, we wrote 2 functions so that we know who the winner is, but haven't called it yet. 
+
 
 // Main function to play the game
 function playGame() {
@@ -81,7 +83,9 @@ function playGame() {
   const isPlayerMoveValid = (playerMove == "rock" || playerMove == "paper" || playerMove == "scissors");
 
   if (isPlayerMoveValid) {
-    const computerMove = getComputerMove();
+    //if player types in correct word, then go to next step
+    
+    const computerMove = getComputerMove();//generate computer move
     const winner = determineWinner(playerMove, computerMove); // output: tie, player, computer
     // If tie, then log "You guys are tied!"
     

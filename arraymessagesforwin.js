@@ -22,7 +22,7 @@ module.exports = smartAsssRemarksAddtl;
 
 
 const tie = ["Oh it's a tie, eh???! Maybe if you arm wrestle, you can break the tie."]
-
+module.exports = tie; 
 
 /* Additional Ideas: 
 
