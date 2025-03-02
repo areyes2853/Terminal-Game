@@ -15,7 +15,7 @@ const smartAsssRemarksAddtl = ["You lost! Cue the sad music!",
     "Bum bum bum... sad tuba sounds, you lost.",
     "You lost. Better luck next time.",
     "You lost. You need to step up your Rock, Paper, Scissors game so that you don't make puppies and babies sad.",
-    
+
 ]
 
 module.exports = smartAsssRemarksAddtl; 
@@ -49,4 +49,7 @@ playerScore <= 10, play again. Once they get to 10, game over.
 For funny comments use template literals with backtick ` so can add user's name
 let funnyWinnerComment1 = `asdflkjsdfkjsdkfj, ${player}!`;
 let funnyWinnerComment2 = `blah blah blah`; 
+
+
+additional comments so can save and push
 */
