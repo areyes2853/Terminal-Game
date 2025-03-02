@@ -18,7 +18,7 @@ const smartAsssRemarksAddtl = ["You lost! Cue the sad music!",
 
 ]
 
-module.exports = smartAsssRemarksAddtl; 
+//module.exports = smartAsssRemarksAddtl; 
 
 
 const tie = ["Oh it's a tie, eh???! Maybe if you arm wrestle, you can break the tie."]

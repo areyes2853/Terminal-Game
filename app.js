@@ -2,7 +2,7 @@
 const prompt = require("prompt-sync")();
 const username = prompt('What is your name? ');
 const smartAsssremarsk = require('./array.js');
-const smartAsssremarskWinner = require('./array.js');
+const smartAsssremarskWinner = require('./arraymessagesforwin.js')
 const smartAsssremarskTie = require('./array.js');
 
 console.log(`Welcome, ${username}! \n`);
@@ -42,29 +42,29 @@ function getComputerMove() {
 // Function to determine the winner given a player's move and the computer's move
 function determineWinner(playerMove, computerMove) { //comparison bwtn both parameters
   // If the moves are the same, it's a tie
-  let winner;
+  //let winner;
   if (playerMove === computerMove) {
-    winner = "tie";
+    return "tie";
   }
   // Else if playerMove is 'rock' and computerMove is 'scissors', player wins 
   else if (playerMove === "rock" && computerMove === "scissors") {
-    winner = "player";
+    return "player";
   } 
   // Else if playerMove is 'paper' and computerMove is 'rock', player wins
   else if (playerMove === "paper" && computerMove === "rock") {
-    winner = "player";
+        return "player";
   }
   // Else if playerMove is 'scissors' and computerMove is 'paper', player wins
   else if (playerMove === "scissors" && computerMove === "paper") {
-    winner = "player";
+    return "player";
   } 
   // Else, the computer wins
   else {
     //winner = `Computer wins ${username}`
-    winner = "computer";
+    return "computer";
   }
   // Return the result (e.g., 'win', 'lose', 'tie')
-  return winner;
+  //return winner;
     
 } // sylvia notes for understanding for this assignment but not for future dev
 // so now, we wrote 2 functions so that we know who the winner is, but haven't called it yet. 
@@ -89,8 +89,9 @@ function playGame() {
     const winner = determineWinner(playerMove, computerMove); // output: tie, player, computer
     // If tie, then log "You guys are tied!"
     
-    console.log(`\n${username}: ${playerMove} \n`);
+    console.log(`${username}: ${playerMove} \n`);
     console.log(`Computer: ${computerMove} \n`);
+    
     if (winner === "tie") {
         // If tie, log a random smartass remark!
         const randomIndexThree = Math.floor(Math.random() * smartAsssremarskTie.length);
@@ -99,7 +100,7 @@ function playGame() {
     } else if (winner === "player") {
         // If player wins, log a random smartass remark!
         const randomIndexTwo = Math.floor(Math.random() * smartAsssremarskWinner.length);
-      console.log(`${username} wins! ${smartAsssremarskWinner[randomIndexTwo]}`);
+      console.log(`${username} ${smartAsssremarskWinner[randomIndexTwo]}`);
     } else {
         // If computer wins, log a random smartass remark!
         const randomIndex = Math.floor(Math.random() * smartAsssremarsk.length);
