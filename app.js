@@ -1,9 +1,8 @@
-
-const prompt = require("prompt-sync")();
-const username = prompt('What is your name? ');
 const smartAsssremarsk = require('./array.js');
 const smartAsssremarskWinner = require('./arraymessagesforwin.js')
 const smartAsssremarskTie = require('./array.js');
+const prompt = require("prompt-sync")();
+const username = prompt('What is your name? ');
 
 console.log(`Welcome, ${username}! \n`);
 console.log("Please enter your move (rock, paper, or scissors)");
